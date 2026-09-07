@@ -56,41 +56,34 @@ class FirstScreen extends StatelessWidget{
 }
   }
 
-class SecondScreen extends StatelessWidget{
+class SecondScreen extends StatelessWidget {
 @override
-  Widget build(BuildContext context) {  // descrive what to show 
-  return Scaffold(
-    appBar: AppBar(title: Text('About Me')),
-    body:Center(
-      child: Column( //vertical layout
-      mainAxisAlignment: MainAxisAlignment.center,
-      children:[
-        SizedBox(height: 10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [],
+  Widget build(BuildContext context) {
+    // TODO: implement createElement
+    return MaterialApp(
+      home: Scaffold(
+         appBar: AppBar(title: Text('Offline Image')),
+         body: Center(
+          child: Image.asset(
+              'assets/images/logo.jpg',
+              width: 200,
+              height: 200,
+              
+
+
+
+
+
+              
+           ),
         ),
-        SizedBox(height: 10),
-        Text('By the way, Im Mark Viscayca, and Im a 3rd year college student. I love playing basketball and I also run regularly to keep myself healthy, and I love watching good movies for entertainment.'),
-        SizedBox(height: 10),
-        ElevatedButton(
-          onPressed:() {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ThirdScreen()),
-            );
-          },
-            child: Text('My Skills')
-        )
-      ],
-
+    
       ),
+    );
+     
 
-    )
-  );
-  
-}
   }
+}
 
 class ThirdScreen extends StatelessWidget{
 @override
