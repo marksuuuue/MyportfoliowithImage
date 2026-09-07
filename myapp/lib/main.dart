@@ -22,22 +22,20 @@ class FirstScreen extends StatelessWidget{
 @override
   Widget build(BuildContext context) {  // descrive what to show 
   return Scaffold(
-    appBar: AppBar(title: Text('My First App')),
+    appBar: AppBar(title: Text('My Portfolio')), 
     body:Center(
       child: Column( //vertical layout
       mainAxisAlignment: MainAxisAlignment.center,
       children:[
-        Icon(Icons.star, size: 40),
         SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.thumb_down),
-            Icon(Icons.thumb_up),
-          ],
+          children: [],
         ),
         SizedBox(height: 10),
-        Text('Hello Flutter'),
+        Text('Viscayca, Mark Joseph R.'),
+        Text('BSIT'),
+        Text('Global Reciprocal Colleges'),
         SizedBox(height: 10),
         ElevatedButton(
           onPressed:() {
@@ -46,7 +44,7 @@ class FirstScreen extends StatelessWidget{
               MaterialPageRoute(builder: (context) => SecondScreen()),
             );
           },
-            child: Text('Go to second Screen')
+            child: Text('About Me')
         )
       ],
 
@@ -59,16 +57,149 @@ class FirstScreen extends StatelessWidget{
   }
 
 class SecondScreen extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Second Screen')),
-      body: Center(
-        child: ElevatedButton(
-           onPressed: () => Navigator.pop(context), child: Text('Go back')), 
+@override
+  Widget build(BuildContext context) {  // descrive what to show 
+  return Scaffold(
+    appBar: AppBar(title: Text('About Me')),
+    body:Center(
+      child: Column( //vertical layout
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [],
+        ),
+        SizedBox(height: 10),
+        Text('By the way, Im Mark Viscayca, and Im a 3rd year college student. I love playing basketball and I also run regularly to keep myself healthy, and I love watching good movies for entertainment.'),
+        SizedBox(height: 10),
+        ElevatedButton(
+          onPressed:() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ThirdScreen()),
+            );
+          },
+            child: Text('My Skills')
         )
+      ],
 
-      );
+      ),
+
+    )
+  );
   
-  }
 }
+  }
+
+class ThirdScreen extends StatelessWidget{
+@override
+  Widget build(BuildContext context) {  // descrive what to show 
+  return Scaffold(
+    appBar: AppBar(title: Text('My Skills')),
+    body:Center(
+      child: Column( //vertical layout
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [],
+        ),
+        SizedBox(height: 10),
+        Text('Leadership'),
+        Text('Focus and Reselience'),
+        SizedBox(height: 10),
+        ElevatedButton(
+          onPressed:() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => FourthScreen()),
+            );
+          },
+            child: Text('My Project')
+        )
+      ],
+
+      ),
+
+    )
+  );
+  
+}
+  }
+
+
+class FourthScreen extends StatelessWidget{
+@override
+  Widget build(BuildContext context) {  // descrive what to show 
+  return Scaffold(
+    appBar: AppBar(title: Text('SysArch Project')),
+    body:Center(
+      child: Column( //vertical layout
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [],
+        ),
+        SizedBox(height: 10),
+        Text('We are making QR BASED QUEUEING SYSTEM FOR GRC'),
+        SizedBox(height: 10),
+        ElevatedButton(
+          onPressed:() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => FifthScreen()),
+            );
+          },
+            child: Text('Contact Me')
+        )
+      ],
+
+      ),
+
+    )
+  );
+  
+}
+  } 
+
+class FifthScreen extends StatelessWidget{
+@override
+  Widget build(BuildContext context) {  // descrive what to show 
+  return Scaffold(
+    appBar: AppBar(title: Text('Contact Me')),
+    body:Center(
+      child: Column( //vertical layout
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [],
+        ),
+        SizedBox(height: 10),
+        Text('FB: Mark Viscayca'),
+        Text('Phone Number: 09307515806'),
+        Text('Gmail : viscaycamark@gmail.com'),
+        SizedBox(height: 10),
+        ElevatedButton(
+          onPressed:() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => FirstScreen()),
+            );
+          },
+            child: Text('Back to the Home')
+        )
+      ],
+
+      ),
+
+    )
+  );
+  
+}
+  }
